@@ -1,5 +1,5 @@
 $(document).ready(function(){
-	var url="http://10.0.0.95:8888/2014jobb/ray/app_simple/auth_test.php?callback=?";
+	var url="https://simplehours.no/app_inc/auth.php?callback=?";
     
     //Login Function
     $("#login").click(function(){
