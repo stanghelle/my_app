@@ -107,4 +107,5 @@ $(document).ready(function(){
 
     //Displaying user email on home page
     $("#username1").html(localStorage.username);
+    $("#anavn1").html(localStorage.anavn);
 });
