@@ -4,10 +4,10 @@ $(document).ready(function(){
     //Login Function
     $("#login").click(function(){
     	
-    	var email=$("#email").val();
+    	var username=$("#username").val();
     	var password=$("#password").val();
-    	var dataString="email="+email+"&password="+password+"&login=";
-    	if($.trim(email).length>0 & $.trim(password).length>0)
+    	var dataString="username="+username+"&password="+password+"&login=";
+    	if($.trim(username).length>0 & $.trim(password).length>0)
 		{
 			$.ajax({
 				type: "POST",
@@ -20,7 +20,7 @@ $(document).ready(function(){
 					if(data=="success")
 					{
 						localStorage.login="true";
-						localStorage.email=email;
+						localStorage.username=username;
 						window.location.href = "index.html";
 					}
 					else if(data="failed")
@@ -34,40 +34,7 @@ $(document).ready(function(){
 
     });
 
-    //signup function
-    $("#signup").click(function(){
-    	var fullname=$("#fullname").val();
-    	var email=$("#email").val();
-    	var password=$("#password").val();
-    	var dataString="fullname="+fullname+"&email="+email+"&password="+password+"&signup=";
-
-    	if($.trim(fullname).length>0 & $.trim(email).length>0 & $.trim(password).length>0)
-		{
-			$.ajax({
-				type: "POST",
-				url: url,
-				data: dataString,
-				crossDomain: true,
-				cache: false,
-				beforeSend: function(){ $("#signup").val('Connecting...');},
-				success: function(data){
-					if(data=="success")
-					{
-						alert("Thank you for Registering with us! you can login now");
-					}
-					else if(data="exist")
-					{
-						alert("Hey! You alreay has account! you can login with us");
-					}
-					else if(data="failed")
-					{
-						alert("Something Went wrong");
-					}
-				}
-			});
-		}return false;
-
-    });
+    
 
     //Change Password
     $("#change_password").click(function(){
@@ -139,7 +106,7 @@ $(document).ready(function(){
     });
 
     //Displaying user email on home page
-    $("#email1").html(localStorage.email);
-    var imageHash="http://www.gravatar.com/avatar/"+md5(localStorage.email);
+    $("#username1").html(localStorage.username);
+    var imageHash="http://www.gravatar.com/avatar/"+md5(localStorage.username);
     $("#profilepic").attr('src',imageHash);
 });
