@@ -38,10 +38,10 @@ $(document).ready(function(){
 
     //Change Password
     $("#change_password").click(function(){
-    	var email=localStorage.email;
+    	var email=localStorage.username;
     	var old_password=$("#old_password").val();
     	var new_password=$("#new_password").val();
-    	var dataString="old_password="+old_password+"&new_password="+new_password+"&email="+email+"&change_password=";
+    	var dataString="old_password="+old_password+"&new_password="+new_password+"&username="+username+"&change_password=";
     	if($.trim(old_password).length>0 & $.trim(old_password).length>0)
 		{
 			$.ajax({
@@ -107,6 +107,6 @@ $(document).ready(function(){
 
     //Displaying user email on home page
     $("#username1").html(localStorage.username);
-    var imageHash="http://www.gravatar.com/avatar/"+md5(localStorage.username);
+    var imageHash="http://ftp.simplehours.no/clouda/files/".html(localStorage.username);
     $("#profilepic").attr('src',imageHash);
 });
