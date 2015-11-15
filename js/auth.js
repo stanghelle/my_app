@@ -108,5 +108,5 @@ $(document).ready(function(){
     //Displaying user email on home page
     $("#username1").html(localStorage.username);
     var imageHash="http://simplehours.no/clouda/files/".html(localStorage.username);
-    $("#profilepic").attr('src',imageHash);
+    $("#profilepic").attr('src',"http://simplehours.no/clouda/files/".html(localStorage.username);
 });
