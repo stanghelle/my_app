@@ -107,5 +107,4 @@ $(document).ready(function(){
 
     //Displaying user email on home page
     $("#username1").html(localStorage.username);
-    $("#profilepic").attr('src',"http://simplehours.no/clouda/files/".attr(localStorage.username);
 });
