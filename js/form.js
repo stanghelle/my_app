@@ -5,7 +5,7 @@ $('form').submit(function(){
 	$.ajax({
 		type: 'POST',
 		data: postData+'&amp;lid='+landmarkID,
-		url: 'http://your-domain.com/comments/save.php',
+		url: 'http://simplehours.no/app_inc/save.php',
 		success: function(data){
 			console.log(data);
 			alert('Your comment was successfully added');
