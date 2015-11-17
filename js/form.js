@@ -1,10 +1,10 @@
 $('form').submit(function(){
-	var landmarkID = $(this).parent().attr('data-landmark-id');
+	var landmarkID =localStorage.username;
 	var postData = $(this).serialize();
 	
 	$.ajax({
 		type: 'POST',
-		data: postData+'&amp;lid='+landmarkID,
+		data: postData+'&amp;user_id='+landmarkID,
 		url: 'http://simplehours.no/app_inc/save.php',
 		success: function(data){
 			console.log(data);
