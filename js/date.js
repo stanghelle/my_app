@@ -1,4 +1,3 @@
-<script type="text/javascript">
 function addZero(i) {
     if (i < 10) {
         i = "0" + i;
@@ -18,4 +17,3 @@ var today =  hour +":"+min;
 
 document.getElementById('myDate').value = today;
 }
-</script>
